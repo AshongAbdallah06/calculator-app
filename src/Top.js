@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { AppContext } from './App';
 
 const Top = () => {
@@ -92,7 +92,6 @@ const Top = () => {
                                     equalTextColor: "hsl(198, 20%, 13%)",
                                     equal_Toggle_BgColor: "hsl(176, 100%, 44%)",
                                     equalShadow: "hsl(177, 92%, 70%)",
-                                    equalTextColor: "black"
                                 })
                             }}>
                         </div>
