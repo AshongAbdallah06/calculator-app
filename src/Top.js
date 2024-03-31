@@ -29,7 +29,7 @@ const Top = () => {
                         }}>3</span>
                     </div>
 
-                    <div className="toggle-button" aria-label='button' style={{ backgroundColor: changes.keyPad_ToggleBgColor }}>
+                    <div className="toggle-button" style={{ backgroundColor: changes.keyPad_ToggleBgColor }}>
                         <div 
                             onClick={() => {
                                 setThemeNumber("1")
