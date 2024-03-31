@@ -5,43 +5,29 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
-I added the comments {/* Example */} for readability and for easy navigation.
-Becaue therewere a lot of code on the screen and i wanted to go to a particular place, wuuth the comment i can just search and easily find it 
-
-### The challenge
-
-Users should be able to:
-
-- See the size of the elements adjust based on their device's screen size
-- Perform mathmatical operations like addition, subtraction, multiplication, and division
-- Adjust the color theme based on their preference
-- **Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
 
 ### Screenshot
 
-![](./screenshot.jpg)
+**THEME 1**
+![](./public/Screenshots/theme-1.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+**THEME 2**
+![](./public/Screenshots/theme-2.png)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+**THEME 3**
+![](./public/Screenshots/theme-3.png)
 
 ### Links
 
@@ -56,60 +42,41 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
 - [Styled Components](https://styled-components.com/) - For styles
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+I added the comments for readability and for easy navigation.
+Because there were a lot of code on the screen and I wanted to go to a particular place, with the comment I could just search and easily find it. Also create a state that handles an object for all the color changes in each theme. 
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+  {/* Example */}
+    const [changes, setChanges] = useState({
+        mainBgColor: null, // For the main backgorund
+        textColor: null, // Color of all the texts
+        keyPad_ToggleBgColor: null, // Background for the toggle button and the keypad
+        screenBgColor: null, // Background for the screen
+        keyBgColor: null, // Background for the keys
+        keyColor: null, // Color of the text on the keys e.g., 1,2,3 etc
+        keyShadow: null, // Shadow for each key e.g., 0-9, operators, and point
+        del_Reset_BgColor: null, // Background color for DELETE & RESET KEY
+        del_Reset_Equal_TextColor: null, // Color for DELETE, RESET & EQUAL SIGN KEY
+        del_ResetShadow: null, // Shadow for DELETE & RESET key
+        equal_Toggle_BgColor: null, // Background color for EQUAL SIGN KEY
+        equalShadow: null, // Shadow for EQUAL SIGN KEY
+        equalTextColor: null // Color for EQUAL SIGN KEY
+    });
+``` 
 
 ### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Am still practicing on using the Context API provided by React, and some other hooks.
 
 **Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+<!-- - Website - [Add your name here](https://www.your-site.com) -->
+- Frontend Mentor - [@AshongAbdallah06](https://www.frontendmentor.io/profile/AshongAbdallah06)
+- Twitter - [@XuGaR_2_0_0_6](https://twitter.com/XuGaR_2_0_0_6)
