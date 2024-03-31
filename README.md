@@ -1,7 +1,4 @@
 # Frontend Mentor - Calculator app solution
-
-This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -14,7 +11,6 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -31,8 +27,8 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://www.frontendmentor.io/solutions/calculator-app-iIkVpS1Ezl)
+- Live Site URL: Vercel (https://calculator-app-coral-tau.vercel.app/)
 
 ## My process
 
@@ -43,9 +39,7 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 - Flexbox
 - CSS Grid
 - [React](https://reactjs.org/) - JS library
-- [Styled Components](https://styled-components.com/) - For styles
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 I added the comments for readability and for easy navigation.
@@ -83,10 +77,10 @@ And then used the ternary operator to conditionally render the class based on th
 ```
 
 ### Continued development
-Am still practicing on using the Context API provided by React, and some other hooks.
+Am still practicing on using the Context API provided by React, and some other hooks. I could have used Routing to get this done easily, in terms of changing the colors and background, but i wanted to challenge myself.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
+## Useful Resources
+- ChatGPT
 
 ## Author
 

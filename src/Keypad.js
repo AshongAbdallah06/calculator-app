@@ -23,10 +23,13 @@ const Keypad = () => {
     }
 
     const handleValue = (value) => {
-        !operation && setFirstNumber(value); 
-        operation && setSecondNumber(value);
-        setResults(null); 
-    }
+        if (operation === null) {
+            setFirstNumber((prevFirstNumber) => (prevFirstNumber !== null ? prevFirstNumber + value : value.toString()));
+        } else {
+            setSecondNumber((prevSecondNumber) => (prevSecondNumber !== null ? prevSecondNumber + value : value.toString()));
+        }
+        setResults(null); // Reset results
+    };
 
     const handleOperation = (operation) => {
         setOperation(operation)
@@ -200,8 +203,8 @@ const Keypad = () => {
                 {/* POINT SIGN */}
                 <div 
                     onClick={() => { 
-                        // !operation && setFirstNumber(".")
-                        // operation && setSecondNumber(7)
+                        !operation && handleValue(".")
+                        operation && handleValue(".")
                     }}
                     className="key" 
                     style={{ 
