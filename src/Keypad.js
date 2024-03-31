@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { AppContext } from './App';
 
 const Keypad = () => {
+    
     const { 
         changes, 
         setFirstNumber, 
@@ -39,9 +40,7 @@ const Keypad = () => {
             <div className="keys">
                 {/* Number SEVEN */}
                 <div 
-                    onClick={() => { 
-                        handleValue(7) 
-                    }}
+                    onClick={() => { handleValue(7) }}
                     className="key" 
                     style={{ 
                         backgroundColor: changes.keyBgColor, 
@@ -53,9 +52,7 @@ const Keypad = () => {
 
                 {/* Number EIGHT */}
                 <div 
-                    onClick={() => { 
-                        handleValue(8)
-                    }}
+                    onClick={() => { handleValue(8) }}
                     className="key" 
                     style={{ 
                         backgroundColor: changes.keyBgColor, 
@@ -67,9 +64,7 @@ const Keypad = () => {
 
                 {/* Number NINE */}
                 <div 
-                    onClick={() => { 
-                        handleValue(9)
-                    }}
+                    onClick={() => { handleValue(9) }}
                     className="key" 
                     style={{ 
                         backgroundColor: changes.keyBgColor, 
@@ -91,12 +86,13 @@ const Keypad = () => {
                 {/* DELETE */}
             </div>
 
+
+
+
             <div className="keys">
                 {/* NUMBER FOUR */}
                 <div 
-                    onClick={() => { 
-                        handleValue(4)
-                    }}
+                    onClick={() => { handleValue(4) }}
                     className="key" 
                     style={{ 
                         backgroundColor: changes.keyBgColor, 
@@ -108,9 +104,7 @@ const Keypad = () => {
 
                 {/* NUMBER FIVE */}
                 <div 
-                    onClick={() => { 
-                        handleValue(5)
-                    }}
+                    onClick={() => { handleValue(5) }}
                     className="key" 
                     style={{ 
                         backgroundColor: changes.keyBgColor, 
@@ -122,9 +116,7 @@ const Keypad = () => {
 
                 {/* NUMBER SIX */}
                 <div 
-                    onClick={() => { 
-                        handleValue(6)
-                    }}
+                    onClick={() => { handleValue(6) }}
                     className="key" 
                     style={{ 
                         backgroundColor: changes.keyBgColor, 
@@ -148,12 +140,13 @@ const Keypad = () => {
                 {/* PLUS SIGN */}
             </div>
 
+
+
+
             <div className="keys">
                 {/* NUMBER ONE */}
                 <div 
-                    onClick={() => { 
-                        handleValue(1)
-                    }}
+                    onClick={() => { handleValue(1) }}
                     className="key" 
                     style={{ 
                         backgroundColor: changes.keyBgColor, 
@@ -165,9 +158,7 @@ const Keypad = () => {
 
                 {/* NUMBER TWO */}
                 <div 
-                    onClick={() => { 
-                        handleValue(2)
-                    }}
+                    onClick={() => { handleValue(2) }}
                     className="key" 
                     style={{ 
                         backgroundColor: changes.keyBgColor, 
@@ -179,9 +170,7 @@ const Keypad = () => {
 
                 {/* NUMBER THREE */}
                 <div 
-                    onClick={() => { 
-                        handleValue(3)
-                    }}
+                    onClick={() => { handleValue(3) }}
                     className="key" 
                     style={{ 
                         backgroundColor: changes.keyBgColor, 
@@ -204,6 +193,9 @@ const Keypad = () => {
                 {/* SUBTRACT SIGN */}
             </div>
 
+
+
+
             <div className="keys">
                 {/* POINT SIGN */}
                 <div 
@@ -222,9 +214,7 @@ const Keypad = () => {
 
                 {/* NUMBER ZERO */}
                 <div 
-                    onClick={() => { 
-                        handleValue(0)
-                    }}
+                    onClick={() => { handleValue(0) }}
                     className="key" 
                     style={{ 
                         backgroundColor: changes.keyBgColor, 
@@ -261,6 +251,10 @@ const Keypad = () => {
                 }}>x</div>
                 {/* MULTIPLICATION SIGN */}
             </div>
+
+
+
+
 
             <div className="keys bottom">
                 {/* RESET */}

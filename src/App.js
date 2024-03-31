@@ -12,10 +12,10 @@ function App() {
 
     const [firstNumber, setFirstNumber] = useState(null);
     const [secondNumber, setSecondNumber] = useState(null);
+    const [operation, setOperation] = useState(null);
 
     const [results, setResults] = useState(null); 
 
-    const [operation, setOperation] = useState(null);
     const [changes, setChanges] = useState({
         mainBgColor: null,
         textColor: null,

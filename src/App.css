@@ -42,7 +42,7 @@
     font-size: 0.5rem;
     letter-spacing: 0.7em;
     right: -0.1em;
-    top: -0.5em;
+    top: -0.9em;
     font-weight: 700;
     cursor: pointer;
 }
@@ -74,7 +74,7 @@
     width: 30%;
     position: absolute;
     top: 0.06rem;
-    margin-left: 1px;
+    margin-left: 0.1rem;
     border-radius: 100%;
     background-color: hsl(6, 63%, 50%);
     transition: all 0.2s;
@@ -100,7 +100,6 @@
     text-align: right;
     padding: 1rem;
     color: white;
-    letter-spacing: 3px;
     border-radius: 0.3rem;
     font-weight: 700;
     border: none;
@@ -143,8 +142,12 @@
     transition: all 0.1s;
 }
 
+.key:hover {
+    opacity: 0.8;
+}
+
 .key:active {
-    transform: translateY(1px);
+    transform: translateY(0.05rem);
 }
 
 .white {

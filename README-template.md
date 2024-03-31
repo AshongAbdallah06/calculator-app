@@ -69,6 +69,19 @@ Because there were a lot of code on the screen and I wanted to go to a particula
     });
 ``` 
 
+For the theme toggle button. I used a grid to be able to navigate where to stop. The grid creates a box like structure for each theme which allows me to be able to click on it by adding the `onclick` function. I also set a state to keep track of the current theme, which changes based on the theme that has been clicked. Added a little bit of CSS transform and transition to give it a feel of movement from right to left when toggled. I addded custom CSS transition for each theme. For example
+```css
+    .theme-2 {
+        transform: translateX(0.6rem);
+    }
+```
+And then used the ternary operator to conditionally render the class based on the theme number.
+```js
+    const [themeNumber, setThemeNumber] = useState("1");
+
+    className={`red ${themeNumber && `theme-${themeNumber}`}`};
+```
+
 ### Continued development
 Am still practicing on using the Context API provided by React, and some other hooks.
 
