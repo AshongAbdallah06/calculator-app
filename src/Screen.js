@@ -3,9 +3,16 @@ import { useContext } from 'react';
 import { AppContext } from './App';
 
 const Screen = () => {
-    const { changes } = useContext(AppContext);
+    const { changes, firstNumber, secondNumber, operation, results } = useContext(AppContext);
     return (
-        <input type='text' pattern='[0-9]' className="screen" style={{ backgroundColor: changes.screenBgColor, color: changes.textColor }} />
+        <section className="screen" style={{ 
+            backgroundColor: changes.screenBgColor, 
+            color: changes.textColor 
+        }}>
+            {firstNumber} {operation && operation} {secondNumber}
+            {results}
+        </section>
+
     )
 }
 

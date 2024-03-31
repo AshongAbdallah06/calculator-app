@@ -19,6 +19,8 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
+I added the comments {/* Example */} for readability and for easy navigation.
+Becaue therewere a lot of code on the screen and i wanted to go to a particular place, wuuth the comment i can just search and easily find it 
 
 ### The challenge
 

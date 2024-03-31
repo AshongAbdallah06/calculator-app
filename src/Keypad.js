@@ -3,128 +3,290 @@ import { useContext } from 'react';
 import { AppContext } from './App';
 
 const Keypad = () => {
-    const { changes } = useContext(AppContext);
+    const { 
+        changes, 
+        setFirstNumber, 
+        setSecondNumber, 
+        operation, 
+        handleResults, 
+        setOperation, 
+        results, 
+        setResults 
+    } = useContext(AppContext);
+
+    const clearScreen = () => {
+        setFirstNumber(null) 
+        setOperation(null)
+        setSecondNumber(null)
+        setResults(null)
+    }
+
+    const handleValue = (value) => {
+        !operation && setFirstNumber(value); 
+        operation && setSecondNumber(value);
+        setResults(null); 
+    }
+
+    const handleOperation = (operation) => {
+        setOperation(operation)
+        results && setFirstNumber(results) 
+        setResults(null)
+    }
 
     return (
         <section className="keypad" style={{ backgroundColor: changes.keyPad_ToggleBgColor }}>
 
             <div className="keys">
-                <div className="key" style={{ 
-                    backgroundColor: changes.keyBgColor, 
-                    boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
-                    color: changes.keyColor 
-                }}>7</div>
+                {/* Number SEVEN */}
+                <div 
+                    onClick={() => { 
+                        handleValue(7) 
+                    }}
+                    className="key" 
+                    style={{ 
+                        backgroundColor: changes.keyBgColor, 
+                        boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
+                        color: changes.keyColor 
+                }}>7</div> 
+                {/* NUMBER SEVEN */}
 
-                <div className="key" style={{ 
-                    backgroundColor: changes.keyBgColor, 
-                    boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
-                    color: changes.keyColor 
+
+                {/* Number EIGHT */}
+                <div 
+                    onClick={() => { 
+                        handleValue(8)
+                    }}
+                    className="key" 
+                    style={{ 
+                        backgroundColor: changes.keyBgColor, 
+                        boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
+                        color: changes.keyColor 
                 }}>8</div>
+                {/* NUMBER EIGHT */}
 
-                <div className="key" style={{ 
-                    backgroundColor: changes.keyBgColor, 
-                    boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
-                    color: changes.keyColor 
+
+                {/* Number NINE */}
+                <div 
+                    onClick={() => { 
+                        handleValue(9)
+                    }}
+                    className="key" 
+                    style={{ 
+                        backgroundColor: changes.keyBgColor, 
+                        boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
+                        color: changes.keyColor 
                 }}>9</div>
+                {/* NUMBER NINE */}
 
-                <div className="key white ddb delete" style={{
-                    backgroundColor: changes.del_Reset_BgColor, 
-                    boxShadow: `inset 0px -2px 1px ${changes.del_ResetShadow}`, 
-                    color: changes.del_Reset_Equal_TextColor 
+
+                {/* DELETE */}
+                <div 
+                    onClick={clearScreen}
+                    className="key white ddb delete" 
+                    style={{
+                        backgroundColor: changes.del_Reset_BgColor, 
+                        boxShadow: `inset 0px -2px 1px ${changes.del_ResetShadow}`, 
+                        color: changes.del_Reset_Equal_TextColor 
                 }}>DEL</div>
+                {/* DELETE */}
             </div>
 
             <div className="keys">
-                <div className="key" style={{ 
-                    backgroundColor: changes.keyBgColor, 
-                    boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
-                    color: changes.keyColor 
+                {/* NUMBER FOUR */}
+                <div 
+                    onClick={() => { 
+                        handleValue(4)
+                    }}
+                    className="key" 
+                    style={{ 
+                        backgroundColor: changes.keyBgColor, 
+                        boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
+                        color: changes.keyColor 
                 }}>4</div>
+                {/* NUMBER FOUR */}
 
-                <div className="key" style={{ 
-                    backgroundColor: changes.keyBgColor, 
-                    boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
-                    color: changes.keyColor 
+
+                {/* NUMBER FIVE */}
+                <div 
+                    onClick={() => { 
+                        handleValue(5)
+                    }}
+                    className="key" 
+                    style={{ 
+                        backgroundColor: changes.keyBgColor, 
+                        boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
+                        color: changes.keyColor 
                 }}>5</div>
+                {/* NUMBER FIVE */}
 
-                <div className="key" style={{ 
-                    backgroundColor: changes.keyBgColor, 
-                    boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
-                    color: changes.keyColor 
+
+                {/* NUMBER SIX */}
+                <div 
+                    onClick={() => { 
+                        handleValue(6)
+                    }}
+                    className="key" 
+                    style={{ 
+                        backgroundColor: changes.keyBgColor, 
+                        boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
+                        color: changes.keyColor 
                 }}>6</div>
+                {/* NUMBER SIX */}
 
-                <div className="key add" style={{
-                    backgroundColor: changes.keyBgColor, 
-                    boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
-                    color: changes.keyColor 
+
+                {/* PLUS SIGN */}
+                <div 
+                    onClick={() => {
+                        handleOperation("+")
+                    }}
+                    className="key add" 
+                    style={{
+                        backgroundColor: changes.keyBgColor, 
+                        boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
+                        color: changes.keyColor 
                 }}>+</div>
+                {/* PLUS SIGN */}
             </div>
 
             <div className="keys">
-                <div className="key" style={{ 
-                    backgroundColor: changes.keyBgColor, 
-                    boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
-                    color: changes.keyColor 
+                {/* NUMBER ONE */}
+                <div 
+                    onClick={() => { 
+                        handleValue(1)
+                    }}
+                    className="key" 
+                    style={{ 
+                        backgroundColor: changes.keyBgColor, 
+                        boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
+                        color: changes.keyColor 
                 }}>1</div>
+                {/* NUMBER ONE */}
 
-                <div className="key" style={{ 
-                    backgroundColor: changes.keyBgColor, 
-                    boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
-                    color: changes.keyColor 
+
+                {/* NUMBER TWO */}
+                <div 
+                    onClick={() => { 
+                        handleValue(2)
+                    }}
+                    className="key" 
+                    style={{ 
+                        backgroundColor: changes.keyBgColor, 
+                        boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
+                        color: changes.keyColor 
                 }}>2</div>
+                {/* NUMBER TWO */}
 
-                <div className="key" style={{ 
-                    backgroundColor: changes.keyBgColor, 
-                    boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
-                    color: changes.keyColor 
+
+                {/* NUMBER THREE */}
+                <div 
+                    onClick={() => { 
+                        handleValue(3)
+                    }}
+                    className="key" 
+                    style={{ 
+                        backgroundColor: changes.keyBgColor, 
+                        boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
+                        color: changes.keyColor 
                 }}>3</div>
+                {/* NUMBER THREE */}
 
-                <div className="key subtract" style={{
+
+                {/* SUBTRACT SIGN */}
+                <div 
+                    onClick={() => {
+                        handleOperation("-")
+                    }}
+                    className="key subtract" style={{
                     backgroundColor: changes.keyBgColor, 
                     boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
                     color: changes.keyColor 
                 }}>-</div>
+                {/* SUBTRACT SIGN */}
             </div>
 
             <div className="keys">
-                <div className="key" style={{ 
-                    backgroundColor: changes.keyBgColor, 
-                    boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
-                    color: changes.keyColor 
+                {/* POINT SIGN */}
+                <div 
+                    onClick={() => { 
+                        // !operation && setFirstNumber(".")
+                        // operation && setSecondNumber(7)
+                    }}
+                    className="key" 
+                    style={{ 
+                        backgroundColor: changes.keyBgColor, 
+                        boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
+                        color: changes.keyColor 
                 }}>.</div>
+                {/* POINT SIGN */}
 
-                <div className="key" style={{ 
-                    backgroundColor: changes.keyBgColor, 
-                    boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
-                    color: changes.keyColor 
+
+                {/* NUMBER ZERO */}
+                <div 
+                    onClick={() => { 
+                        handleValue(0)
+                    }}
+                    className="key" 
+                    style={{ 
+                        backgroundColor: changes.keyBgColor, 
+                        boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
+                        color: changes.keyColor 
                 }}>0</div>
+                {/* NUMBER ZERO */}
 
-                <div className="key" style={{ 
-                    backgroundColor: changes.keyBgColor, 
-                    boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
-                    color: changes.keyColor 
+
+                {/* DIVISION SIGN */}
+                <div 
+                    onClick={() => {
+                        handleOperation("/")
+                    }}
+                    className="key divide" 
+                    style={{ 
+                        backgroundColor: changes.keyBgColor, 
+                        boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
+                        color: changes.keyColor 
                 }}>/</div>
+                {/* DIVISION SIGN */}
 
-                <div className="key multiply" style={{
-                    backgroundColor: changes.keyBgColor, 
-                    boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
-                    color: changes.keyColor 
+
+                {/* MULTIPLICATION SIGN */}
+                <div 
+                    onClick={() => {
+                        handleOperation("*")
+                    }}
+                    className="key multiply" 
+                    style={{
+                        backgroundColor: changes.keyBgColor, 
+                        boxShadow: `inset 0px -2px 1px ${changes.keyShadow}`, 
+                        color: changes.keyColor 
                 }}>x</div>
+                {/* MULTIPLICATION SIGN */}
             </div>
 
             <div className="keys bottom">
-
-                <div className="key ddb white" style={{
+                {/* RESET */}
+                <div 
+                    onClick={clearScreen}
+                    className="key ddb white" 
+                    style={{
                     backgroundColor: changes.del_Reset_BgColor, 
                     boxShadow: `inset 0px -2px 1px ${changes.del_ResetShadow}`, 
                     color: changes.del_Reset_Equal_TextColor 
                 }}>RESET</div>
+                {/* RESET */}
 
-                <div className="key white red" style={{
-                    backgroundColor: changes.equal_Toggle_BgColor, 
-                    boxShadow: `inset 0px -2px 1px ${changes.equalShadow}`, 
-                    color: changes.equalTextColor
+
+                {/* EQUAL SIGN */}
+                <div 
+                    onClick={
+                        handleResults
+                    }
+                    className="key white red" 
+                    style={{
+                        backgroundColor: changes.equal_Toggle_BgColor, 
+                        boxShadow: `inset 0px -2px 1px ${changes.equalShadow}`, 
+                        color: changes.equalTextColor
                 }}>=</div>
+                {/* EQUAL SIGN */}
                 
             </div>
         </section>

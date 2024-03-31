@@ -9,8 +9,13 @@ export const AppContext = createContext();
 
 function App() {
     const [themeNumber, setThemeNumber] = useState("1");
-    // const [bgColor, setBgColor] = useState("hsl(222, 26%, 31%)");
 
+    const [firstNumber, setFirstNumber] = useState(null);
+    const [secondNumber, setSecondNumber] = useState(null);
+
+    const [results, setResults] = useState(null); 
+
+    const [operation, setOperation] = useState(null);
     const [changes, setChanges] = useState({
         mainBgColor: null,
         textColor: null,
@@ -25,7 +30,15 @@ function App() {
         equal_Toggle_BgColor: null,
         equalShadow: null,
         equalTextColor: null 
-    })
+    });
+
+    const handleResults = () => {
+        setFirstNumber(null);
+        setSecondNumber(null);
+        setOperation(null);
+        setResults(eval(firstNumber + operation + secondNumber));
+    }
+
     return (
         <div 
             className="App"
@@ -34,8 +47,17 @@ function App() {
                 themeNumber, 
                 setThemeNumber, 
                 changes,
-                setChanges
-               }}>
+                setChanges,
+                firstNumber,
+                setFirstNumber,
+                secondNumber,
+                setSecondNumber,
+                operation,
+                setOperation,
+                results,
+                setResults,
+                handleResults
+            }}>
                 <div className="content">
                     <Top />
 
