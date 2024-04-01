@@ -11,8 +11,8 @@ function App() {
     const [themeNumber, setThemeNumber] = useState("1");
 
     const [firstNumber, setFirstNumber] = useState(null);
-    const [secondNumber, setSecondNumber] = useState(null);
     const [operation, setOperation] = useState(null); // Operator e.g., +, -, /, *
+    const [secondNumber, setSecondNumber] = useState(null);
 
     const [results, setResults] = useState(null); // Total calculated
 
