@@ -12,9 +12,9 @@ function App() {
 
     const [firstNumber, setFirstNumber] = useState(null);
     const [secondNumber, setSecondNumber] = useState(null);
-    const [operation, setOperation] = useState(null);
+    const [operation, setOperation] = useState(null); // Operator e.g., +, -, /, *
 
-    const [results, setResults] = useState(null); 
+    const [results, setResults] = useState(null); // Total calculated
 
     const [changes, setChanges] = useState({
         mainBgColor: null,
@@ -33,10 +33,13 @@ function App() {
     });
 
     const handleResults = () => {
-        setFirstNumber(null);
+        setResults(eval(firstNumber + operation + secondNumber)); // Values are in strings
+        // Concantenating the firstNumber, operation, and secondNumber. eval() does it work to evaluate it
+
+        // null means set to nothing
+        setFirstNumber(null); 
         setSecondNumber(null);
         setOperation(null);
-        setResults(eval(firstNumber + operation + secondNumber));
     }
     
 

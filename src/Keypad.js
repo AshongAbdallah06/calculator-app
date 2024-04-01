@@ -290,4 +290,4 @@ const Keypad = () => {
     )
 }
 
-export default Keypad
+export default Keypad;
